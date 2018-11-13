@@ -15,7 +15,7 @@ import com.trading.tradingview.exception.TradingViewException;
 import com.trading.tradingview.service.TradingService;
 
 @RestController
-@RequestMapping("/api/v1/tradeview")
+@RequestMapping("/market/placeOrder")
 public class TradeViewController {
 
 	@Autowired
