@@ -15,14 +15,13 @@ import com.trading.tradingview.exception.TradingViewException;
 import com.trading.tradingview.service.TradingService;
 
 @RestController
-@RequestMapping("/market/placeOrder")
 public class TradeViewController {
 
 	@Autowired
 	@Qualifier("tradingService")
 	private TradingService tradingService;
 	
-	@RequestMapping(method = RequestMethod.GET, produces={"application/json"})
+	@RequestMapping(path = "/market/orderbook", method = RequestMethod.GET, produces={"application/json"})
 	@CrossOrigin(origins = "http://localhost:4200")
 	public ResponseEntity<String> getTradeData() {
 		try {
@@ -32,7 +31,7 @@ public class TradeViewController {
 		}
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(path = "/market/placeOrder", method = RequestMethod.POST)
 	@CrossOrigin(origins = "http://localhost:4200")
 	public ResponseEntity<String> saveTradeData(@RequestBody TradeData data) {
 		try {
