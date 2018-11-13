@@ -1,5 +1,5 @@
 # angular_spring-boot
-Prerequisites: Java 8
+Prerequisites: Java 8, Maven
 
 <h2>Getting Started</h2>
 To install and test this spring boot application, run the following commands:
